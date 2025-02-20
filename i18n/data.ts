@@ -1,8 +1,3 @@
-// export const filesToLoad: string[] = [
-//   "header.json",
-//   "footer.json",
-// ];
-
 type FolderStructure = {
   folder: string;
   files: string[];
