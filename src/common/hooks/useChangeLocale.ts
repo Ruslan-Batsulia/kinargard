@@ -28,5 +28,5 @@ export const useChangeLocale = () => {
 
   return {
     changeLanguage
-  }
-}
+  };
+};

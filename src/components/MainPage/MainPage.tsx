@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useChangeLocale } from "@/src/common/hooks/ChangeLocale";
+import { useChangeLocale } from "@/src/common/hooks/useChangeLocale";
 
 import "./MainPage.scss";
 
