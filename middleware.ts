@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-import { DEFAULT_LOCALE, LOCALES } from "./src/common/constants";
 import { Locale } from "./src/common/types";
+import { isLocale } from "./src/common/utils";
+import type { NextRequest } from "next/server";
+import { DEFAULT_LOCALE } from "./src/common/constants";
 
-function isLocale(value: string): value is Locale {
-  return LOCALES.some((locale) => locale === value);
-}
+
 
 export function middleware(request: NextRequest) {
   const hostHeader = request.headers.get("host") || "";

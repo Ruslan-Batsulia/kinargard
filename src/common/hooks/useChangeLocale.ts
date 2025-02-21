@@ -1,10 +1,6 @@
-import { useRouter } from "next/navigation";
-import { LOCALES } from "./../constants";
 import { Locale } from "./../types";
-
-function isLocale(value: string): value is Locale {
-  return LOCALES.some((locale) => locale === value);
-}
+import { isLocale } from "../utils";
+import { useRouter } from "next/navigation";
 
 export const useChangeLocale = () => {
   const router = useRouter();

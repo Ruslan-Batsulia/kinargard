@@ -6,6 +6,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { geistMono, geistSans } from "@/src/common/fonts";
 
 import "@/scss/globals.scss";
+import { Locale } from "@/src/common/types";
+import { isLocale } from "@/src/common/utils";
+import { DEFAULT_LOCALE } from "@/src/common/constants";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,13 +21,10 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const cookieStore = await cookies();
-  const locale = cookieStore.get("NEXT_LOCALE")?.value || "uk";
+  const locale = cookieStore.get("NEXT_LOCALE")?.value ?? "";
+  const validLocale: Locale = isLocale(locale) ? locale : DEFAULT_LOCALE;
 
-  if (!["uk", "en"].includes(locale)) {
-    notFound();
-  }
-
-  const messages = await getMessages({ locale });
+  const messages = await getMessages({ locale: validLocale });
 
   return (
     <html lang={locale}>
