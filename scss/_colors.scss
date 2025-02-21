@@ -1,7 +1,12 @@
 @use "sass:map";
 
 $colors: (
-  
+  primaryBackgroundDarkTheme: #21252B,
+  secondaryBackgroundDarkTheme: #16191D,
+
+  primaryBorderDarkTheme: #323538,
+
+  primaryTextDarkTheme: #E2E5E9,
 );
 
 @function getColor($key) {

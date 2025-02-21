@@ -11,27 +11,15 @@ body, html {
 
 body {
   display: flex;
-  flex-direction: column;
 
   min-width: 375px;
   min-height: 100vh;
   max-height: 100vh;
   overflow: hidden;
-  // background-color: getColor(backgroundColor);
-
-  // color: var(--textColor);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  & main {
-    flex: 1;
-  }
-
-  & header, footer {
-    flex-shrink: 0;
-  }
 }
 
 ol,

@@ -1,0 +1,7 @@
+.side-bar {
+  min-height: 100%;
+  width: 250px;
+
+  background-color: getColor(secondaryBackgroundDarkTheme);
+  border-right: 1px solid getColor(primaryBorderDarkTheme);
+}

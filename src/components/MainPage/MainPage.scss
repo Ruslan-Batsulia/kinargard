@@ -1,3 +1,15 @@
-button {
-  max-width: 50px;
+.main-page {
+  min-height: 100%;
+  width: 100%;
+
+  background-color: getColor(primaryBackgroundDarkTheme);
+  color: getColor(primaryTextDarkTheme);
+
+  &__text {
+    
+  }
+
+  button {
+    max-width: 50px;
+  }
 }

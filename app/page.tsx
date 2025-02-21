@@ -1,7 +1,10 @@
-import { MainPage } from "@/src/components";
+import { MainPage, SideBar } from "@/src/components";
 
 export default function Home() {
   return (
-    <MainPage />
+    <>
+      <SideBar />
+      <MainPage />
+    </>
   );
 }
