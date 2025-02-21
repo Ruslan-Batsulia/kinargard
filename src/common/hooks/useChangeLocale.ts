@@ -1,4 +1,4 @@
-import { Locale } from "./../types";
+import type { Locale } from "./../types";
 import { isLocale } from "../utils";
 import { useRouter } from "next/navigation";
 

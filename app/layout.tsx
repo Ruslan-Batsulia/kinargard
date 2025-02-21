@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
+import type { Locale } from "@/src/common/types";
+import { isLocale } from "@/src/common/utils";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { DEFAULT_LOCALE } from "@/src/common/constants";
 import { geistMono, geistSans } from "@/src/common/fonts";
 
 import "@/scss/globals.scss";
-import { Locale } from "@/src/common/types";
-import { isLocale } from "@/src/common/utils";
-import { DEFAULT_LOCALE } from "@/src/common/constants";
 
 export const metadata: Metadata = {
   title: "Create Next App",
