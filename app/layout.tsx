@@ -7,6 +7,7 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { DEFAULT_LOCALE } from "@/src/common/constants";
 import { geistMono, geistSans } from "@/src/common/fonts";
+import { GlobalContextProvider } from "@/src/common/context/SideBarContext";
 
 import "@/scss/globals.scss";
 
@@ -30,7 +31,9 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NextIntlClientProvider locale={locale} messages={messages} key={locale}>
-          {children}
+          <GlobalContextProvider>
+            {children}
+          </GlobalContextProvider>
         </NextIntlClientProvider>
       </body>
     </html>

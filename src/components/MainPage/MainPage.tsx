@@ -1,35 +1,46 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
-import { useChangeLocale } from "@/src/common/hooks/useChangeLocale";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { useGlobalContext } from "@/src/common/context/SideBarContext";
+
+import burgerMenuDefault from "@/public/images/common/darkTheme/burger-default.svg";
 
 import "./MainPage.scss";
 
 export default function MainPage() {
-  const locale = useLocale();
-  const { changeLanguage } = useChangeLocale();
   const localeMainPage = useTranslations("MainPage");
+
+  const {
+    getGlobalState: {
+      sideBarHidden
+    },
+    setGlobalField,
+  } = useGlobalContext();
+
+  const handleToggleSidebar = () => {
+    setGlobalField("sideBarHidden", (prev: boolean) => !prev);
+  };
 
   return (
     <>
       <main className="main-page">
+        <button
+          className={
+            "main-page__burger-menu" +
+            (!sideBarHidden ? " main-page__burger-menu--hidden" : "")
+          }
+          onClick={handleToggleSidebar}
+        >
+          <Image
+            src={burgerMenuDefault}
+            alt={"Burger Menu"}
+            className={"main-page__burger-menu-img"}
+          />
+        </button>
+        
         <div className="main-page__text">
           {localeMainPage("welcome")}
-        </div>
-
-        <div>
-          <button
-            onClick={() => changeLanguage("en")}
-            disabled={locale === "en"}
-          >
-            {"Eng"}
-          </button>
-          <button
-            onClick={() => changeLanguage("uk")}
-            disabled={locale === "uk"}
-          >
-            {"Укр"}
-          </button>
         </div>
       </main>
     </>
