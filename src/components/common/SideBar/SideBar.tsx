@@ -1,34 +1,37 @@
 "use client";
 
 import Image from "next/image";
-import { StoreType } from "@/src/common/store/store";
-import { useSelector, useDispatch } from "react-redux";
-import { ToggleSideBarHidden } from "@/src/common/store/reducers/SideBarHidden";
+import { useGlobalContext } from "@/src/common/context/SideBarContext";
 
 import burgerMenuDefault from "@/public/images/common/darkTheme/burger-default.svg";
 
 import "./SideBar.scss";
 
 export default function SideBar() {
-  const sideBarHiddenReducer = useSelector((state: StoreType) => state.sideBarHidden.sideBarHidden);
+  const {
+    getGlobalState: {
+      sideBarHidden
+    },
+    setGlobalField,
+  } = useGlobalContext();
 
-  const dispatch = useDispatch();
+  const handleToggleSidebar = () => {
+    setGlobalField("sideBarHidden", (prev: boolean) => !prev);
+  };
 
   return (
     <>
       <aside
         className={
           "side-bar" +
-          (sideBarHiddenReducer ? " side-bar--hidden" : "")
+          (sideBarHidden ? " side-bar--hidden" : "")
         }
       >
         <div className={"side-bar__backdrop"}>
           <section className={"side-bar__header"}>
             <button
               className={"side-bar__burger-menu"}
-              onClick={() => {
-                dispatch({ type: ToggleSideBarHidden.TOGGLE_SIDEBAR });
-              }}
+              onClick={handleToggleSidebar}
             >
               <Image
                 src={burgerMenuDefault}

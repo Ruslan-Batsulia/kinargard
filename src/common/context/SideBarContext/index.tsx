@@ -10,7 +10,7 @@ import React, {
 } from "react";
 
 type GlobalStateType = {
-  
+  sideBarHidden: boolean;
 }
 
 type GlobalContextType = {
@@ -22,7 +22,7 @@ const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 
 export const GlobalContextProvider = ({ children }: { children: ReactNode }) => {
   const [getGlobalState, setGlobalState] = useState<GlobalStateType>({
-    
+    sideBarHidden: false,
   });
 
   const setGlobalField = useCallback(
