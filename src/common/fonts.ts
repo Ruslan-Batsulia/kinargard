@@ -1,13 +1,17 @@
 import localFont from "next/font/local";
 
 export const geistSans = localFont({
-  src: "./../../public/fonts/GeistVF.woff",
+  src: [
+    { path: "./../../public/fonts/GeistVF.woff2", weight: "100 900" },
+    { path: "./../../public/fonts/GeistVF.woff", weight: "100 900" },
+  ],
   variable: "--font-geist-sans",
-  weight: "100 900",
 });
 
 export const geistMono = localFont({
-  src: "./../../public/fonts/GeistMonoVF.woff",
+  src: [
+    { path: "./../../public/fonts/GeistMonoVF.woff2", weight: "100 900" },
+    { path: "./../../public/fonts/GeistMonoVF.woff", weight: "100 900" },
+  ],
   variable: "--font-geist-mono",
-  weight: "100 900",
 });

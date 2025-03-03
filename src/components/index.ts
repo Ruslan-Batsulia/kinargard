@@ -1,2 +1,1 @@
-export { default as MainPage } from "./MainPage/MainPage";
-export { default as SideBar } from "./SideBar/SideBar";
+export { default as StartPage } from "./StartPage/Main/StartPage";

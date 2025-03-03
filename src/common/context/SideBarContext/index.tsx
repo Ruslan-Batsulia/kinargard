@@ -1,16 +1,16 @@
 "use client";
 
 import React, {
-  createContext,
-  useContext,
-  ReactNode,
-  useState,
   useMemo,
-  useCallback
+  useState,
+  ReactNode,
+  useContext,
+  useCallback,
+  createContext,
 } from "react";
 
 type GlobalStateType = {
-  sideBarHidden: boolean;
+  
 }
 
 type GlobalContextType = {
@@ -22,7 +22,7 @@ const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 
 export const GlobalContextProvider = ({ children }: { children: ReactNode }) => {
   const [getGlobalState, setGlobalState] = useState<GlobalStateType>({
-    sideBarHidden: false,
+    
   });
 
   const setGlobalField = useCallback(
@@ -32,10 +32,11 @@ export const GlobalContextProvider = ({ children }: { children: ReactNode }) => 
     ) => {
       setGlobalState(prevState => ({
         ...prevState,
-        [field]: typeof value === "function" ? (value as (prev: GlobalStateType[K]) => GlobalStateType[K])(prevState[field]) : value
+        [field]: typeof value === "function"
+          ? (value as (prev: GlobalStateType[K]) => GlobalStateType[K])(prevState[field])
+          : value
       }));
-    },
-    []
+    }, []
   );
 
   const providerValue = useMemo(() => ({
