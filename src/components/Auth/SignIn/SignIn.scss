@@ -1,0 +1,196 @@
+.sign-in {
+  display: flex;
+  position: relative;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("./../../../../public/images/auth/sign-in-background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(33, 37, 43, 0.95);
+  }
+
+  &__left {
+    flex: 1;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+  }
+
+  &__form {
+    width: 400px;
+    height: fit-content;
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__header-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 32px;
+
+    background-color: getColor(grayBlueBackgroundDarkTheme);
+  }
+
+  &__header-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: fit-content;
+    height: fit-content;
+
+    background-color: transparent;
+  }
+
+  &__header-logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__header-logo-title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+    color: getColor(whiteTextDarkTheme);
+  }
+  
+  &__main-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    padding: 32px;
+
+    background-color: getColor(darkerBackgroundDarkTheme);
+  }
+
+  &__main-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: getColor(lightGrayTextDarkTheme);
+  }
+
+  &__main-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+    border: 0;
+    border-top: 1px solid getColor(softGrayBorderDarkTheme);
+    border-bottom: 1px solid getColor(softGrayBorderDarkTheme);
+
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  &__main-input {
+    width: 100%;
+    padding: 8px 13px;
+
+    background-color: getColor(grayBlueBackgroundDarkTheme);
+
+    border: 1px solid getColor(darkBorderDarkTheme);
+    border-radius: 4px;
+
+    outline: none;
+    
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: getColor(softestTextDarkTheme);
+
+    &::placeholder {
+      color: getColor(mutedTextDarkTheme);
+    }
+  }
+
+  &__main-button {
+    text-align: center;
+
+    width: 100%;
+    padding: 8px;
+
+    border: none;
+    border-radius: 4px;
+    background-color: getColor(primaryBtnDefaultDarkTheme);
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: getColor(darkTextDarkTheme);
+
+    transition: background-color 250ms ease;
+
+    &:hover {
+      background-color: getColor(primaryBtnHoverDarkTheme);
+    }
+
+    &:active {
+      background-color: getColor(primaryBtnDefaultDarkTheme);
+    }
+  }
+
+  &__main-sign-up {
+    display: flex;
+    gap: 8px;
+
+    width: fit-content;
+    height: fit-content;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &__main-question {
+    color: getColor(softGrayTextDarkTheme);
+  }
+
+  &__main-link {
+    color: getColor(lightBlueTextDarkTheme);
+    text-decoration: underline;
+  }
+
+  &__footer-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 32px;
+
+    background-color: getColor(deepDarkBackgroundDarkTheme);
+  }
+
+  
+}
