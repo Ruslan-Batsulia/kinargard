@@ -1,12 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-
 import "@/scss/not-found.scss";
 
 export default function NotFoundPage() {
-  const router = useRouter();
-
   return (
     <div className="not-found">
       <h1 className="not-found__title">404</h1>

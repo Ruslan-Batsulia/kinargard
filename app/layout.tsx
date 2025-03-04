@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
-import { notFound } from "next/navigation";
 import { isLocale } from "@/src/common/utils";
 import { getMessages } from "next-intl/server";
 import type { Locale } from "@/src/common/types";
