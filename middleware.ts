@@ -4,8 +4,6 @@ import { isLocale } from "./src/common/utils";
 import type { NextRequest } from "next/server";
 import { DEFAULT_LOCALE } from "./src/common/constants";
 
-
-
 export function middleware(request: NextRequest) {
   const hostHeader = request.headers.get("host") || "";
   const host = hostHeader.split(":")[0];
@@ -19,5 +17,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel\\..*).*)'],
+  matcher: ["/((?!api|_next|favicon.ico).*)"],
 };

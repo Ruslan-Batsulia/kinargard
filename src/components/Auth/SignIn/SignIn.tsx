@@ -11,6 +11,7 @@ import "./SignIn.scss";
 
 export default function SignIn() {
   const localeAuthSignInPage = useTranslations("Auth.SignIn");
+  const localeStartPage = useTranslations("MainPage");
 
   return (
     <>
@@ -38,7 +39,7 @@ export default function SignIn() {
 
             <div className={"sign-in__main-form"}>
               <span className={"sign-in__main-title"}>
-                {localeAuthSignInPage("title")}
+                {localeStartPage("welcome")}
               </span>
 
               <div className={"sign-in__main-body"}>
