@@ -5,12 +5,12 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ChangeLanguage } from "../../common";
 
-import Logo from "@/public/images/logo.svg";
+import LogoIcon from "@/public/images/logo.svg";
 
 import "./SignIn.scss";
 
 export default function SignIn() {
-  const localeMainPage = useTranslations("Auth.SignIn");
+  const localeAuthSignInPage = useTranslations("Auth.SignIn");
 
   return (
     <>
@@ -24,7 +24,7 @@ export default function SignIn() {
             <div className={"sign-in__header-form"}>
               <div className={"sign-in__header-logo-container"}>
                 <Image
-                  src={Logo}
+                  src={LogoIcon}
                   alt={"Logo"}
                   height={40}
                   className={"sign-in__header-logo-img"}
@@ -38,39 +38,39 @@ export default function SignIn() {
 
             <div className={"sign-in__main-form"}>
               <span className={"sign-in__main-title"}>
-                {localeMainPage("title")}
+                {localeAuthSignInPage("title")}
               </span>
 
               <div className={"sign-in__main-body"}>
                 <input
                   type={"email"}
                   className={"sign-in__main-input"}
-                  placeholder={localeMainPage("inputEmail")}
+                  placeholder={localeAuthSignInPage("inputEmail")}
                 />
 
                 <input
                   type={"password"}
                   className={"sign-in__main-input"}
-                  placeholder={localeMainPage("inputPassword")}
+                  placeholder={localeAuthSignInPage("inputPassword")}
                 />
 
                 <button
                   type={"submit"}
                   className={"sign-in__main-button"}
                 >
-                  {localeMainPage("submitButton")}
+                  {localeAuthSignInPage("submitButton")}
                 </button>
               </div>
 
               <div className={"sign-in__main-sign-up"}>
                 <span className={"sign-in__main-question"}>
-                  {localeMainPage("question")}
+                  {localeAuthSignInPage("question")}
                 </span>
                 <Link
                   href={"/auth/sign-up"}
                   className={"sign-in__main-link"}
                 >
-                  {localeMainPage("signUpLink")}
+                  {localeAuthSignInPage("signUpLink")}
                 </Link>
               </div>
             </div>

@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { options } from "./data";
 import { useLocale } from "next-intl";
-import { Locale } from "@/src/common/types";
+import type { Locale } from "@/src/common/types";
 import { useChangeLocale } from "@/src/common/hooks/useChangeLocale";
-import changeLanguageIcon from "@/public/images/DarkTheme/common/ChangeLanguage.svg";
 
+import changeLanguageIcon from "@/public/images/DarkTheme/common/ChangeLanguage.svg";
 import arrowDown from "@/public/images/DarkTheme/common/ArrowDown.svg";
 
 import "./ChangeLanguage.scss";
@@ -15,17 +16,6 @@ type Option = {
   label: string;
   value: Locale;
 };
-
-const options: Option[] = [
-  {
-    label: "English",
-    value: "en"
-  },
-  {
-    label: "Українська",
-    value: "uk"
-  }
-] as const;
 
 export default function ChangeLanguage() {
   const currentLocale = useLocale();
