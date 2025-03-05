@@ -10,7 +10,7 @@ import LogoIcon from "@/public/images/logo.svg";
 import "./SignIn.scss";
 
 export default function SignIn() {
-  const localeAuthSignInPage = useTranslations("Auth.SignIn");
+  const localeAuthSignInPage = useTranslations("SignIn");
 
   return (
     <>
