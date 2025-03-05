@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-color: blue;
+}
+
+body, html {
+  position: relative;
+}
+
+body {
+  display: flex;
+
+  min-width: 375px;
+  
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+
+  overflow: hidden;
+
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+
+  width: 375px;
+
+  @include tablet {
+    padding: 0 48px;
+    width: 768px;
+  }
+
+  @include desktop {
+    padding: 0 80px;
+    width: 1440px;
+  }
+}

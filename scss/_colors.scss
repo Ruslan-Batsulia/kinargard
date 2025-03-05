@@ -1,0 +1,41 @@
+@use "sass:map";
+
+$colors: (
+  //Dark Theme:
+  primaryBackgroundDarkTheme: #21252B,
+  secondaryBackgroundDarkTheme: #16191D,
+  grayBlueBackgroundDarkTheme: #161E22,
+  darkerBackgroundDarkTheme: #253238,
+  deepDarkBackgroundDarkTheme: #1D272B,
+  deepGrayBackgroundDarkTheme: #2C3139,
+  charcoalBackgroundDarkTheme: #444A52,
+
+  primaryBorderDarkTheme: #323538,
+  secondaryBorderDarkTheme: #3C4045,
+  darkBorderDarkTheme: #17181C,
+  softGrayBorderDarkTheme: #37474F,
+
+  primaryTextDarkTheme: #E2E5E9,
+  secondaryTextDarkTheme: #949AA3,
+  lightGrayTextDarkTheme: #C6D2D9,
+  whiteTextDarkTheme: #FFFFFF,
+  mutedTextDarkTheme: #607D8B,
+  darkTextDarkTheme: #17181C,
+  softGrayTextDarkTheme: #A2B8C3,
+  lightBlueTextDarkTheme: #B3BBFF,
+  softestTextDarkTheme: #F2F6F8,
+
+  secondaryBtnDefaultDarkTheme: transparent,
+  secondaryBtnHoverDarkTheme: #242832,
+  secondaryBtnActiveDarkTheme: #27283E,
+  primaryBtnDefaultDarkTheme: #5DAEDF,
+  primaryBtnHoverDarkTheme: #2BBBFC,
+  primaryBtnActiveDarkTheme: #5DAEDF,
+
+  //Light Theme:
+
+);
+
+@function getColor($key) {
+  @return map.get($colors, $key);
+};

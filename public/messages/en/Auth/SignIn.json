@@ -1,0 +1,10 @@
+{
+  "SignIn": {
+    "title": "Log In",
+    "inputEmail": "Email",
+    "inputPassword": "Password",
+    "submitButton": "Sign In",
+    "question": "Don't have an account?",
+    "signUpLink": "Sign Up"
+  }
+}
