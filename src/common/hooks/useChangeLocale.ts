@@ -55,8 +55,9 @@ export const useChangeLocale = () => {
     const newHost = hostParts.join(".");
     const newUrl = `${protocol}//${newHost}${window.location.pathname}${window.location.search}`;
 
-    router.refresh();
-    window.location.href = newUrl;
+    // router.refresh();
+    // window.location.href = newUrl;
+    router.push(newUrl);
   };
 
   return { changeLanguage };
