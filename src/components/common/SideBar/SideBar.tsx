@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useGlobalContext } from "@/src/common/context/SideBarContext";
 
-import burgerMenuDefault from "@/public/images/common/darkTheme/burger-default.svg";
+import burgerMenuDefault from "@/public/images/DarkTheme/common/burger-default.svg";
 
 import "./SideBar.scss";
 

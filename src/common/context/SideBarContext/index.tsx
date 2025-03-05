@@ -15,7 +15,10 @@ type GlobalStateType = {
 
 type GlobalContextType = {
   getGlobalState: GlobalStateType;
-  setGlobalField: (field: keyof GlobalStateType, value: any) => void;
+  setGlobalField: <K extends keyof GlobalStateType>(
+    field: K,
+    value: GlobalStateType[K] | ((prev: GlobalStateType[K]) => GlobalStateType[K])
+  ) => void;
 };
 
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
@@ -42,7 +45,7 @@ export const GlobalContextProvider = ({ children }: { children: ReactNode }) => 
   const providerValue = useMemo(() => ({
     getGlobalState,
     setGlobalField,
-  }), [getGlobalState]);
+  }), [getGlobalState, setGlobalField]);
 
   return (
     <GlobalContext.Provider value={providerValue}>

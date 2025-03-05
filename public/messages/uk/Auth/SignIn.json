@@ -1,0 +1,10 @@
+{
+  "SignIn": {
+    "title": "Вхід",
+    "inputEmail": "Пошта",
+    "inputPassword": "Пароль",
+    "submitButton": "Увійти",
+    "question": "Не маєте облікового запису?",
+    "signUpLink": "Зареєструватися"
+  }
+}

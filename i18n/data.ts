@@ -5,21 +5,25 @@ type FolderStructure = {
 };
 
 export const foldersToLoad: FolderStructure[] = [
+  // {
+  //   folder: "name",
+  //   files: ["Name.json"],
+  //   subfolders: [
+  //     {
+  //       folder: "name",
+  //       files: ["Name.json"],
+  //       subfolders: [
+  //         {
+  //           folder: "name",
+  //           files: ["Name.json"],
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
-    folder: "name",
-    files: ["Name.json"],
-    subfolders: [
-      {
-        folder: "name",
-        files: ["Name.json"],
-        subfolders: [
-          {
-            folder: "name",
-            files: ["Name.json"],
-          },
-        ],
-      },
-    ],
+    folder: "Auth",
+    files: ["SignIn.json"],
   },
 ];
 

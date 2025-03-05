@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useGlobalContext } from "@/src/common/context/SideBarContext";
 
-import burgerMenuDefault from "@/public/images/common/darkTheme/burger-default.svg";
+import burgerMenuDefault from "@/public/images/DarkTheme/common/burger-default.svg";
 
 import "./Main.scss";
 
