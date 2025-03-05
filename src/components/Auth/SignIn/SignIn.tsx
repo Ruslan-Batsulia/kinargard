@@ -10,8 +10,7 @@ import LogoIcon from "@/public/images/logo.svg";
 import "./SignIn.scss";
 
 export default function SignIn() {
-  const localeAuthSignInPage = useTranslations("Auth.SignIn");
-  const localeStartPage = useTranslations("MainPage");
+  const localeAuthSignInPage = useTranslations("SignIn");
 
   return (
     <>
@@ -39,7 +38,7 @@ export default function SignIn() {
 
             <div className={"sign-in__main-form"}>
               <span className={"sign-in__main-title"}>
-                {localeStartPage("welcome")}
+                {localeAuthSignInPage("title")}
               </span>
 
               <div className={"sign-in__main-body"}>
