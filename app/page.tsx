@@ -1,6 +1,6 @@
 import { StartPage } from "@/src/components";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <StartPage />
