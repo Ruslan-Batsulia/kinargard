@@ -26,9 +26,6 @@ export default async function RootLayout({
   const validLocale: Locale = isLocale(locale) ? locale : DEFAULT_LOCALE;
 
   const messages = await getMessages({ locale: validLocale });
-  console.log("messages: ", messages);
-  console.log("locale: ", locale);
-  console.log("validLocale: ", validLocale);
 
   return (
     <html lang={locale}>

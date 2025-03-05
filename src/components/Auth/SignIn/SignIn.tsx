@@ -10,7 +10,7 @@ import LogoIcon from "@/public/images/logo.svg";
 import "./SignIn.scss";
 
 export default function SignIn() {
-  const localeAuthSignInPage = useTranslations("Auth.SignIn");
+  const localeAuthSignInPage = useTranslations();
 
   return (
     <>
@@ -38,39 +38,39 @@ export default function SignIn() {
 
             <div className={"sign-in__main-form"}>
               <span className={"sign-in__main-title"}>
-                {localeAuthSignInPage("title")}
+                {localeAuthSignInPage("Auth.SignIn.title")}
               </span>
 
               <div className={"sign-in__main-body"}>
                 <input
                   type={"email"}
                   className={"sign-in__main-input"}
-                  placeholder={localeAuthSignInPage("inputEmail")}
+                  placeholder={localeAuthSignInPage("Auth.SignIn.inputEmail")}
                 />
 
                 <input
                   type={"password"}
                   className={"sign-in__main-input"}
-                  placeholder={localeAuthSignInPage("inputPassword")}
+                  placeholder={localeAuthSignInPage("Auth.SignIn.inputPassword")}
                 />
 
                 <button
                   type={"submit"}
                   className={"sign-in__main-button"}
                 >
-                  {localeAuthSignInPage("submitButton")}
+                  {localeAuthSignInPage("Auth.SignIn.submitButton")}
                 </button>
               </div>
 
               <div className={"sign-in__main-sign-up"}>
                 <span className={"sign-in__main-question"}>
-                  {localeAuthSignInPage("question")}
+                  {localeAuthSignInPage("Auth.SignIn.question")}
                 </span>
                 <Link
                   href={"/auth/sign-up"}
                   className={"sign-in__main-link"}
                 >
-                  {localeAuthSignInPage("signUpLink")}
+                  {localeAuthSignInPage("Auth.SignIn.signUpLink")}
                 </Link>
               </div>
             </div>
